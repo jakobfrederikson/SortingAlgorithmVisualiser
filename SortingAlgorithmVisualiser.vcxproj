@@ -144,6 +144,7 @@
     <ClCompile Include="Algorithms\SortingAlgorithm.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Algorithms\SelectionSort.cpp" />
+    <ClCompile Include="Algorithms\MergeSort.cpp" />
     <ClCompile Include="SortingAlgorithmManager.cpp" />
     <ClCompile Include="SortingMenu.cpp" />
   </ItemGroup>
@@ -155,6 +156,7 @@
     <ClInclude Include="Algorithms\BubbleSort.h" />
     <ClInclude Include="Algorithms\InsertionSort.h" />
     <ClInclude Include="Algorithms\SelectionSort.h" />
+    <ClInclude Include="Algorithms\MergeSort.h" />
     <ClInclude Include="SortingAlgorithmManager.h" />
     <ClInclude Include="SortingMenu.h" />
   </ItemGroup>

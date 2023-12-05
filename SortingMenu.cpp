@@ -14,6 +14,7 @@ void SortingMenu::initialiseMenuItems() {
     menuItems.push_back(sf::Text("Bubble Sort", font, 24));
     menuItems.push_back(sf::Text("Insertion Sort", font, 24));
     menuItems.push_back(sf::Text("Selection Sort", font, 24));
+    menuItems.push_back(sf::Text("Merge Sort", font, 24));
 
     for (size_t i = 0; i < menuItems.size(); ++i)
     {

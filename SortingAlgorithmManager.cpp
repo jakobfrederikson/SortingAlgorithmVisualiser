@@ -2,6 +2,7 @@
 #include "Algorithms/BubbleSort.h"
 #include "Algorithms/InsertionSort.h"
 #include "Algorithms/SelectionSort.h"
+#include "Algorithms/MergeSort.h"
 #include <iostream>
 #include <vector>
 #include <random>
@@ -29,6 +30,8 @@ void SortingAlgorithmManager::Display(int selectedAlgorithm, sf::RenderWindow& w
         break;
     case 2:
         sortingAlgorithm = new SelectionSort();
+    case 3:
+        sortingAlgorithm = new MergeSort();
     default:
         break;
     }
