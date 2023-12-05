@@ -1,42 +1,26 @@
-#include "BubbleSort.h"
-#include<SFML/Audio.hpp>
-#include <iostream>
+#include "SelectionSort.h"
 
-void BubbleSort::Sort(sf::RenderWindow& window, std::vector<int>& array) {
-    sf::SoundBuffer buffer;
-    if (!buffer.loadFromFile("./Sounds/beep.wav")) {
-        std::cout << "Error loading sound file" << std::endl;
-    }
-    sf::Sound sound;
-    sound.setBuffer(buffer);
-
-    bool swapped;
+void SelectionSort::Sort(sf::RenderWindow& window, std::vector<int>& array) {
     std::chrono::steady_clock::time_point clock = std::chrono::high_resolution_clock::now();
 
     for (size_t i = 0; i < array.size() - 1; ++i) {
-        swapped = false;
-        for (size_t j = 0; j < array.size() - i - 1; ++j) {
-            if (array[j] > array[j + 1]) {
-                // Swap elements
-                std::swap(array[j], array[j + 1]);
-                swapped = true;
+        size_t minIndex = i;
+
+        for (size_t j = i + 1; j < array.size(); ++j) {
+            if (array[j] < array[minIndex]) {
+                minIndex = j;
             }
         }
 
-        drawAlgorithm(window, array, clock);
-        sound.play();
+        std::swap(array[minIndex], array[i]);
 
-        // If no swapping occurred, the array is already sorted
-        if (!swapped) {
-            break;
-        }
+        drawAlgorithm(window, array, clock);
     }
 }
 
-void BubbleSort::drawAlgorithm(sf::RenderWindow& window, const std::vector<int>& array, std::chrono::steady_clock::time_point& startTime)
-{
+void SelectionSort::drawAlgorithm(sf::RenderWindow& window, const std::vector<int>& array, std::chrono::steady_clock::time_point& startTime) {
+    
     window.clear();
-
 
     // Find the maximum value in the array
     int maxElement = *std::max_element(array.begin(), array.end());

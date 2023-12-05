@@ -13,10 +13,12 @@ void InsertionSort::Sort(sf::RenderWindow& window, std::vector<int>& array)
             --j;
 
             // Visualize the step after swapping
-            drawAlgorithm(window, array, clock);
+            
         }
 
         array[j + 1] = key;
+
+        drawAlgorithm(window, array, clock);
     }
 }
 
