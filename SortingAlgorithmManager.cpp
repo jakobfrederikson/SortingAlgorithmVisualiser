@@ -1,6 +1,7 @@
 #include "SortingAlgorithmManager.h"
 #include "Algorithms/BubbleSort.h"
 #include "Algorithms/InsertionSort.h"
+#include "Algorithms/SelectionSort.h"
 #include <iostream>
 #include <vector>
 #include <random>
@@ -26,6 +27,8 @@ void SortingAlgorithmManager::Display(int selectedAlgorithm, sf::RenderWindow& w
     case 1:
         sortingAlgorithm = new InsertionSort();
         break;
+    case 2:
+        sortingAlgorithm = new SelectionSort();
     default:
         break;
     }
