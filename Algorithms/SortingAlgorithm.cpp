@@ -1,4 +1,4 @@
-#include "InsertionSort.h"
+#include "SortingAlgorithm.h"
 
 void SortingAlgorithm::drawAdditionalInfo(sf::RenderWindow& window, const std::chrono::steady_clock::time_point& startTime, const std::vector<int>& array) {
     // Draw additional information
