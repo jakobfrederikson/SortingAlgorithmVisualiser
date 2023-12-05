@@ -1,14 +1,14 @@
 #include<SFML/Graphics.hpp>
 #include<iostream>
 #include "SortingMenu.h"
-#include "SortingAlgorithmDisplay.h"
+#include "SortingAlgorithmManager.h"
 
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(1200, 600), "Sorting Visualiser by Jakob");
 
 	SortingMenu sortingMenu;
-	SortingAlgorithmDisplay algorithmDisplay;
+	SortingAlgorithmManager algorithmManager;
 
 	int selectedAlgorithm = -1;
 
@@ -31,7 +31,7 @@ int main()
 		else {
 			std::cout << "Running algorithm: " << selectedAlgorithm << std::endl;
 
-			algorithmDisplay.display(selectedAlgorithm, window);
+			algorithmManager.Display(selectedAlgorithm, window);
 			selectedAlgorithm = -1;
 		}
 

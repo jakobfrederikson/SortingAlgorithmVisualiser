@@ -21,7 +21,16 @@
     <ClCompile Include="SortingMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SortingAlgorithmDisplay.cpp">
+    <ClCompile Include="SortingAlgorithmManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\BubbleSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\InsertionSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithms\SortingAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +41,16 @@
     <ClInclude Include="SortingMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SortingAlgorithmDisplay.h">
+    <ClInclude Include="SortingAlgorithmManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithms\SortingAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithms\BubbleSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithms\InsertionSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
