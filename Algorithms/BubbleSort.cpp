@@ -34,9 +34,6 @@ void BubbleSort::drawAlgorithm(sf::RenderWindow& window, const std::vector<int>&
     // Find the maximum value in the array
     int maxElement = *std::max_element(array.begin(), array.end());
 
-    // Calculate the scale factor to fit the elements within the window height
-    float scaleFactor = static_cast<float>(window.getSize().y) / maxElement;
-
     // Calculate the scale factors to fit the elements within the window
     float heightScaleFactor = static_cast<float>(window.getSize().y) / maxElement;
     float widthScaleFactor = static_cast<float>(window.getSize().x) / array.size();
