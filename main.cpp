@@ -5,7 +5,7 @@
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Sorting Visualiser by Jakob");
+	sf::RenderWindow window(sf::VideoMode(1200, 600), "Sorting Visualiser by Jakob");
 
 	SortingMenu sortingMenu;
 	SortingAlgorithmDisplay algorithmDisplay;
@@ -31,7 +31,7 @@ int main()
 		else {
 			std::cout << "Running algorithm: " << selectedAlgorithm << std::endl;
 
-			algorithmDisplay.display(selectedAlgorithm);
+			algorithmDisplay.display(selectedAlgorithm, window);
 			selectedAlgorithm = -1;
 		}
 
