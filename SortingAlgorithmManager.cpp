@@ -128,6 +128,15 @@ std::vector<int> SortingAlgorithmManager::generateRandomArray(int size) {
 void SortingAlgorithmManager::waitForInput(sf::RenderWindow& window)
 {
 	sf::Event event;
+
+    sf::Text text;
+    text.setFont(font);
+    text.setString("Sorting complete");
+    text.setCharacterSize(30);
+    text.setFillColor(sf::Color::Yellow);
+    text.setPosition(window.getSize().x / 2 - text.getLocalBounds().width / 2,
+        window.getSize().y / 2 - text.getLocalBounds().height / 2);
+
 	while (window.waitEvent(event)) {
 		if (event.type == sf::Event::KeyPressed || event.type == sf::Event::MouseButtonPressed) {
 			return;  // User input received, exit the function
