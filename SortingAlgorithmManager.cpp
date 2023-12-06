@@ -37,7 +37,6 @@ void SortingAlgorithmManager::Display(int selectedAlgorithm, sf::RenderWindow& w
     }
 
     if (sortingAlgorithm) {
-        sortingAlgorithm->font = font;
         sortingAlgorithm->Sort(window, array);
         delete sortingAlgorithm;
     }

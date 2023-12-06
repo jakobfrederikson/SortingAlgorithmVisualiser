@@ -40,9 +40,11 @@ void MergeSort::drawAlgorithm(sf::RenderWindow& window, const std::vector<int>& 
 
     // Draw the entire array elements
     for (size_t i = 0; i < array.size(); ++i) {
-        sf::RectangleShape rect(sf::Vector2f(widthScaleFactor, array[i] * heightScaleFactor));
+        float height = array[i] * heightScaleFactor;
+        sf::RectangleShape rect(sf::Vector2f(widthScaleFactor, height));
         rect.setPosition(i * widthScaleFactor, window.getSize().y - rect.getSize().y);
         window.draw(rect);
+        PlaySound(height);
     }
 
 	// Draw additional information

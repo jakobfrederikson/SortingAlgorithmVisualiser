@@ -3,13 +3,6 @@
 #include <iostream>
 
 void BubbleSort::Sort(sf::RenderWindow& window, std::vector<int>& array) {
-    sf::SoundBuffer buffer;
-    if (!buffer.loadFromFile("./Sounds/beep.wav")) {
-        std::cout << "Error loading sound file" << std::endl;
-    }
-    sf::Sound sound;
-    sound.setBuffer(buffer);
-
     bool swapped;
     std::chrono::steady_clock::time_point clock = std::chrono::high_resolution_clock::now();
 
@@ -24,7 +17,6 @@ void BubbleSort::Sort(sf::RenderWindow& window, std::vector<int>& array) {
         }
 
         drawAlgorithm(window, array, clock);
-        sound.play();
 
         // If no swapping occurred, the array is already sorted
         if (!swapped) {
@@ -47,9 +39,11 @@ void BubbleSort::drawAlgorithm(sf::RenderWindow& window, const std::vector<int>&
 
     // Draw the array elements
     for (size_t i = 0; i < array.size(); ++i) {
-        sf::RectangleShape rect(sf::Vector2f(widthScaleFactor, array[i] * heightScaleFactor));
+        float height = array[i] * heightScaleFactor;
+        sf::RectangleShape rect(sf::Vector2f(widthScaleFactor, height));
         rect.setPosition(i * widthScaleFactor, window.getSize().y - rect.getSize().y);
         window.draw(rect);
+        PlaySound(height);
     }
 
     // Draw additional information

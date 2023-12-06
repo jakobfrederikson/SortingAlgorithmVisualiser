@@ -1,4 +1,26 @@
 #include "SortingAlgorithm.h"
+#include <iostream>
+
+SortingAlgorithm::SortingAlgorithm() : font(), sound()
+{
+    // Load font
+    if (!font.loadFromFile("./Inter-Regular.ttf")) {
+        std::cout << "Error loading font" << std::endl;
+    }
+
+    // Load sound
+    if (!soundBuffer.loadFromFile("./Sounds/beep.wav")) {
+        std::cout << "Error loading sound file" << std::endl;
+    }
+    sound.setBuffer(soundBuffer);
+    sound.setVolume(50.f);
+}
+
+void SortingAlgorithm::PlaySound(float height)
+{
+    sound.setPitch(1.0f + height * 0.01f);
+    sound.play();
+}
 
 void SortingAlgorithm::drawAdditionalInfo(sf::RenderWindow& window, const std::chrono::steady_clock::time_point& startTime, const std::vector<int>& array) {
     // Draw additional information
